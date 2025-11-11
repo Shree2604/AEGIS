@@ -1,0 +1,249 @@
+(server_env) (base) PS D:\Honors\EIDS\AEGIS\Phase3\4> python week4_server.py
+✅ Server initialized
+   Global model parameters: 623749
+======================================================================
+🖥️  Week 4 Server: Communication Optimization
+======================================================================
+Listening on 0.0.0.0:9999
+Waiting for clients...
+======================================================================
+
+📥 Connection from ('10.0.100.77', 44134)
+[Client 1] Round 1: baseline (2448.52 KB)
+[Server] Global model updated with FedMA aggregation from 2 clients
+   ✅ Received & deserialized in 1.05s + 14.92ms
+   Loss: 0.5471
+
+📥 Connection from ('10.0.100.77', 44148)
+[Client 1] Round 1: fp16_gzip (1116.27 KB)
+[Server] Global model updated with FedMA aggregation from 3 clients
+   ✅ Received & deserialized in 0.41s + 24.99ms
+   Loss: 0.5471
+
+📥 Connection from ('10.0.100.77', 35428)
+[Client 1] Round 1: fc_only (2055.32 KB)
+[Server] Global model updated with FedMA aggregation from 4 clients
+   ✅ Received & deserialized in 0.69s + 6.98ms
+   Loss: 0.5471
+
+📥 Connection from ('10.0.100.77', 35434)
+[Client 1] Round 1: delta (2448.52 KB)
+[Server] Global model updated with FedMA aggregation from 5 clients
+   ✅ Received & deserialized in 1.10s + 10.01ms
+   Loss: 0.5471
+
+📥 Connection from ('10.0.100.77', 56676)
+[Client 1] Round 2: baseline (2448.52 KB)
+[Server] Global model updated with FedMA aggregation from 2 clients
+   ✅ Received & deserialized in 0.86s + 24.09ms
+   Loss: 0.5339
+
+📥 Connection from ('10.0.100.77', 46934)
+[Client 1] Round 2: fp16_gzip (1116.78 KB)
+[Server] Global model updated with FedMA aggregation from 3 clients
+   ✅ Received & deserialized in 0.42s + 47.98ms
+   Loss: 0.5339
+
+📥 Connection from ('10.0.100.77', 57588)
+[Client 1] Round 2: fc_only (2055.32 KB)
+[Server] Global model updated with FedMA aggregation from 4 clients
+   ✅ Received & deserialized in 0.70s + 9.01ms
+   Loss: 0.5339
+
+📥 Connection from ('10.0.100.77', 46872)
+[Client 1] Round 2: delta (2447.95 KB)
+[Server] Global model updated with FedMA aggregation from 5 clients
+   ✅ Received & deserialized in 0.98s + 16.92ms
+   Loss: 0.5339
+
+📥 Connection from ('10.0.100.77', 56518)
+[Client 1] Round 3: baseline (2448.52 KB)
+[Server] Global model updated with FedMA aggregation from 2 clients
+   ✅ Received & deserialized in 0.90s + 16.00ms
+   Loss: 0.4880
+
+📥 Connection from ('10.0.100.77', 60408)
+[Client 1] Round 3: fp16_gzip (1116.26 KB)
+[Server] Global model updated with FedMA aggregation from 3 clients
+   ✅ Received & deserialized in 0.47s + 47.59ms
+   Loss: 0.4880
+
+📥 Connection from ('10.0.100.77', 35288)
+[Client 1] Round 3: fc_only (2055.32 KB)
+[Server] Global model updated with FedMA aggregation from 4 clients
+   ✅ Received & deserialized in 0.78s + 8.93ms
+   Loss: 0.4880
+
+📥 Connection from ('10.0.100.77', 54390)
+[Client 1] Round 3: delta (2447.95 KB)
+[Server] Global model updated with FedMA aggregation from 5 clients
+   ✅ Received & deserialized in 1.15s + 26.00ms
+   Loss: 0.4880
+
+📥 Connection from ('10.0.100.77', 57044)
+[Client 1] Round 4: baseline (2448.52 KB)
+[Server] Global model updated with FedMA aggregation from 2 clients
+   ✅ Received & deserialized in 0.80s + 19.00ms
+   Loss: 0.5567
+
+📥 Connection from ('10.0.100.77', 36322)
+[Client 1] Round 4: fp16_gzip (1116.21 KB)
+[Server] Global model updated with FedMA aggregation from 3 clients
+   ✅ Received & deserialized in 0.41s + 47.00ms
+   Loss: 0.5567
+
+📥 Connection from ('10.0.100.77', 60092)
+[Client 1] Round 4: fc_only (2055.32 KB)
+[Server] Global model updated with FedMA aggregation from 4 clients
+   ✅ Received & deserialized in 0.63s + 10.02ms
+   Loss: 0.5567
+
+📥 Connection from ('10.0.100.77', 49138)
+[Client 1] Round 4: delta (2447.95 KB)
+[Server] Global model updated with FedMA aggregation from 5 clients
+   ✅ Received & deserialized in 0.78s + 18.99ms
+   Loss: 0.5567
+
+📥 Connection from ('10.0.100.77', 47836)
+[Client 1] Round 5: baseline (2448.52 KB)
+[Server] Global model updated with FedMA aggregation from 2 clients
+   ✅ Received & deserialized in 0.81s + 18.01ms
+   Loss: 0.5180
+
+📥 Connection from ('10.0.100.77', 47840)
+[Client 1] Round 5: fp16_gzip (1116.37 KB)
+[Server] Global model updated with FedMA aggregation from 3 clients
+   ✅ Received & deserialized in 0.46s + 42.99ms
+   Loss: 0.5180
+
+📥 Connection from ('10.0.100.77', 37672)
+[Client 1] Round 5: fc_only (2055.32 KB)
+[Server] Global model updated with FedMA aggregation from 4 clients
+   ✅ Received & deserialized in 0.79s + 7.99ms
+   Loss: 0.5180
+
+📥 Connection from ('10.0.100.77', 48818)
+[Client 1] Round 5: delta (2447.95 KB)
+[Server] Global model updated with FedMA aggregation from 5 clients
+   ✅ Received & deserialized in 1.01s + 24.90ms
+   Loss: 0.5180
+
+📥 Connection from ('10.0.100.77', 48672)
+[Client 1] Round 6: baseline (2448.52 KB)
+[Server] Global model updated with FedMA aggregation from 2 clients
+   ✅ Received & deserialized in 0.93s + 15.02ms
+   Loss: 0.5007
+
+📥 Connection from ('10.0.100.77', 48688)
+[Client 1] Round 6: fp16_gzip (1116.33 KB)
+[Server] Global model updated with FedMA aggregation from 3 clients
+   ✅ Received & deserialized in 0.38s + 45.98ms
+   Loss: 0.5007
+
+📥 Connection from ('10.0.100.77', 41584)
+[Client 1] Round 6: fc_only (2055.32 KB)
+[Server] Global model updated with FedMA aggregation from 4 clients
+   ✅ Received & deserialized in 0.67s + 13.00ms
+   Loss: 0.5007
+
+📥 Connection from ('10.0.100.77', 38484)
+[Client 1] Round 6: delta (2447.96 KB)
+[Server] Global model updated with FedMA aggregation from 5 clients
+   ✅ Received & deserialized in 0.58s + 12.93ms
+   Loss: 0.5007
+
+📥 Connection from ('10.0.100.77', 54428)
+[Client 1] Round 7: baseline (2448.52 KB)
+[Server] Global model updated with FedMA aggregation from 2 clients
+   ✅ Received & deserialized in 0.84s + 16.00ms
+   Loss: 0.5431
+
+📥 Connection from ('10.0.100.77', 44390)
+[Client 1] Round 7: fp16_gzip (1115.87 KB)
+[Server] Global model updated with FedMA aggregation from 3 clients
+   ✅ Received & deserialized in 0.40s + 51.00ms
+   Loss: 0.5431
+
+📥 Connection from ('10.0.100.77', 53096)
+[Client 1] Round 7: fc_only (2055.32 KB)
+[Server] Global model updated with FedMA aggregation from 4 clients
+   ✅ Received & deserialized in 0.74s + 8.91ms
+   Loss: 0.5431
+
+📥 Connection from ('10.0.100.77', 37088)
+[Client 1] Round 7: delta (2447.95 KB)
+[Server] Global model updated with FedMA aggregation from 5 clients
+   ✅ Received & deserialized in 0.75s + 19.01ms
+   Loss: 0.5431
+
+📥 Connection from ('10.0.100.77', 45118)
+[Client 1] Round 8: baseline (2448.52 KB)
+[Server] Global model updated with FedMA aggregation from 2 clients
+   ✅ Received & deserialized in 0.94s + 18.00ms
+   Loss: 0.5218
+
+📥 Connection from ('10.0.100.77', 40736)
+[Client 1] Round 8: fp16_gzip (1115.78 KB)
+[Server] Global model updated with FedMA aggregation from 3 clients
+   ✅ Received & deserialized in 0.38s + 41.92ms
+   Loss: 0.5218
+
+📥 Connection from ('10.0.100.77', 44720)
+[Client 1] Round 8: fc_only (2055.32 KB)
+[Server] Global model updated with FedMA aggregation from 4 clients
+   ✅ Received & deserialized in 0.86s + 4.00ms
+   Loss: 0.5218
+
+📥 Connection from ('10.0.100.77', 40262)
+[Client 1] Round 8: delta (2447.95 KB)
+[Server] Global model updated with FedMA aggregation from 5 clients
+   ✅ Received & deserialized in 0.91s + 20.98ms
+   Loss: 0.5218
+
+📥 Connection from ('10.0.100.77', 37656)
+[Client 1] Round 9: baseline (2448.53 KB)
+[Server] Global model updated with FedMA aggregation from 2 clients
+   ✅ Received & deserialized in 0.66s + 12.98ms
+   Loss: 0.5119
+
+📥 Connection from ('10.0.100.77', 37658)
+[Client 1] Round 9: fp16_gzip (1116.19 KB)
+[Server] Global model updated with FedMA aggregation from 3 clients
+   ✅ Received & deserialized in 0.32s + 43.18ms
+   Loss: 0.5119
+
+📥 Connection from ('10.0.100.77', 59028)
+[Client 1] Round 9: fc_only (2055.32 KB)
+[Server] Global model updated with FedMA aggregation from 4 clients
+   ✅ Received & deserialized in 0.52s + 4.97ms
+   Loss: 0.5119
+
+📥 Connection from ('10.0.100.77', 49086)
+[Client 1] Round 9: delta (2447.95 KB)
+[Server] Global model updated with FedMA aggregation from 5 clients
+   ✅ Received & deserialized in 1.07s + 15.00ms
+   Loss: 0.5119
+
+📥 Connection from ('10.0.100.77', 55632)
+[Client 1] Round 10: baseline (2448.52 KB)
+[Server] Global model updated with FedMA aggregation from 2 clients
+   ✅ Received & deserialized in 0.77s + 15.01ms
+   Loss: 0.5206
+
+📥 Connection from ('10.0.100.77', 36078)
+[Client 1] Round 10: fp16_gzip (1116.29 KB)
+[Server] Global model updated with FedMA aggregation from 3 clients
+   ✅ Received & deserialized in 0.34s + 47.02ms
+   Loss: 0.5206
+
+📥 Connection from ('10.0.100.77', 43396)
+[Client 1] Round 10: fc_only (2055.32 KB)
+[Server] Global model updated with FedMA aggregation from 4 clients
+   ✅ Received & deserialized in 0.75s + 6.00ms
+   Loss: 0.5206
+
+📥 Connection from ('10.0.100.77', 57372)
+[Client 1] Round 10: delta (2447.97 KB)
+[Server] Global model updated with FedMA aggregation from 5 clients
+   ✅ Received & deserialized in 1.01s + 13.90ms
+   Loss: 0.5206
