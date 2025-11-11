@@ -164,9 +164,9 @@ def serialize_delta(state_dict, prev_state):
 # Client Training Function
 # ----------------------------
 
-def train_client(client_id, data_loader, num_epochs, global_state=None, prev_state=None):
+def train_client(client_id, data_loader, num_epochs, global_state=None, prev_state=None, learning_rate=0.0005):
     """Train local model"""
-    print(f"\n[Client {client_id}] Starting training...")
+    print(f"\n[Client {client_id}] Starting training with learning rate: {learning_rate}...")
     
     model = DisasterCNN(num_classes=4)
     
@@ -176,7 +176,7 @@ def train_client(client_id, data_loader, num_epochs, global_state=None, prev_sta
         print(f"[Client {client_id}] Loaded global model")
     
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.Adam(model.parameters(), lr=0.001)
+    optimizer = optim.Adam(model.parameters(), lr=learning_rate)
     
     # Training
     model.train()
@@ -279,7 +279,7 @@ def send_to_server(server_ip, server_port, client_id, round_num, model,
 # Main Client Loop
 # ----------------------------
 
-def run_client(data_dir, server_ip, server_port, num_rounds=5):
+def run_client(data_dir, server_ip, server_port, num_rounds=10, num_epochs=25, batch_size=64, learning_rate=0.0005):
     """Main client loop with optimization comparison"""
     
     print("="*70)
@@ -303,7 +303,7 @@ def run_client(data_dir, server_ip, server_port, num_rounds=5):
     ])
     
     dataset = DisasterDataset(image_paths, labels, transform=transform)
-    data_loader = DataLoader(dataset, batch_size=32, shuffle=True)
+    data_loader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
     
     # Strategies to test (each client uses different strategy per round)
     strategies = ['baseline', 'fp16_gzip', 'fc_only', 'delta']
@@ -326,8 +326,9 @@ def run_client(data_dir, server_ip, server_port, num_rounds=5):
         model, training_loss = train_client(
             client_id=1,
             data_loader=data_loader,
-            num_epochs=2,
-            prev_state=prev_state
+            num_epochs=num_epochs,
+            prev_state=prev_state,
+            learning_rate=learning_rate
         )
         
         # Test ALL strategies for comparison
@@ -409,4 +410,13 @@ if __name__ == "__main__":
     data_dir = sys.argv[2]
     server_port = 9999
     
-    run_client(data_dir, server_ip, server_port, num_rounds=5)
+    # Default values match the specified metrics
+    run_client(
+        data_dir=data_dir,
+        server_ip=server_ip,
+        server_port=server_port,
+        num_rounds=10,
+        num_epochs=25,
+        batch_size=64,
+        learning_rate=0.0005
+    )
