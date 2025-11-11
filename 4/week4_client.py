@@ -1,4 +1,3 @@
-# week4_client.py
 # CLIENT: Sends models using BOTH baseline and optimized strategies
 # Run on Raspberry Pi or any machine
 
@@ -168,7 +167,11 @@ def train_client(client_id, data_loader, num_epochs, global_state=None, prev_sta
     """Train local model"""
     print(f"\n[Client {client_id}] Starting training with learning rate: {learning_rate}...")
     
-    model = DisasterCNN(num_classes=4)
+    # ✅ Detect number of classes automatically
+    num_classes = len(set(data_loader.dataset.labels))
+    print(f"[Client {client_id}] Detected {num_classes} classes.")
+    
+    model = DisasterCNN(num_classes=num_classes)
     
     # Load global model if available
     if global_state is not None:
