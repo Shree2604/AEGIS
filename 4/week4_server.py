@@ -128,7 +128,7 @@ class OptimizationServer:
         self.port = port
         
         # Global model
-        self.global_model = DisasterCNN(num_classes=4)
+        self.global_model = DisasterCNN(num_classes=5)
         self.global_state = self.global_model.state_dict()
         
         # Tracking
@@ -212,12 +212,12 @@ class OptimizationServer:
                 client_models = []
                 for log in self.communication_logs:
                     if log['round'] == round_num:
-                        model = DisasterCNN(num_classes=4)
+                        model = DisasterCNN(num_classes=5)
                         model.load_state_dict(log['state_dict'])
                         client_models.append(model)
                 
                 # Add current client's model
-                model = DisasterCNN(num_classes=4)
+                model = DisasterCNN(num_classes=5)
                 model.load_state_dict(state_dict)
                 client_models.append(model)
                 
