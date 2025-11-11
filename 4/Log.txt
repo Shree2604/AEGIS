@@ -1,0 +1,476 @@
+shreeraj@raspberrypi:~ $ ls
+AEGIS  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+shreeraj@raspberrypi:~ $ cd AEGIS
+shreeraj@raspberrypi:~/AEGIS $ ls
+AEGIS  aegis_env  pi_client.py  server_receiver.py  test_comm.py
+shreeraj@raspberrypi:~/AEGIS $ source aegis_env/bin/activate
+(aegis_env) shreeraj@raspberrypi:~/AEGIS $ cd AEGIS
+(aegis_env) shreeraj@raspberrypi:~/AEGIS/AEGIS $ ls
+1  2  3  4  Architecture
+(aegis_env) shreeraj@raspberrypi:~/AEGIS/AEGIS $ cd 4
+(aegis_env) shreeraj@raspberrypi:~/AEGIS/AEGIS/4 $ ls
+AIDER  fedma_utils.py  readme.md  week4_client.py  week4_server.py
+(aegis_env) shreeraj@raspberrypi:~/AEGIS/AEGIS/4 $ python week4_client.py 10.0.107.145 AIDER/AIDER
+======================================================================
+🚀 Week 4 Client: Communication Optimization
+======================================================================
+Server: 10.0.107.145:9999
+Dataset: AIDER/AIDER
+======================================================================
+
+📁 Loading AIDER dataset...
+✅ Loaded 750 images from 5 classes
+
+======================================================================
+📡 Round 1/10
+======================================================================
+
+[Client 1] Starting training with learning rate: 0.0005...
+[Client 1] Detected 5 classes.
+[Client 1]   Epoch 1/25, Loss: 1.5254
+[Client 1]   Epoch 2/25, Loss: 1.2611
+[Client 1]   Epoch 3/25, Loss: 1.0712
+[Client 1]   Epoch 4/25, Loss: 0.9574
+[Client 1]   Epoch 5/25, Loss: 0.8764
+[Client 1]   Epoch 6/25, Loss: 0.8129
+[Client 1]   Epoch 7/25, Loss: 0.7595
+[Client 1]   Epoch 8/25, Loss: 0.6687
+[Client 1]   Epoch 9/25, Loss: 0.5945
+[Client 1]   Epoch 10/25, Loss: 0.5441
+[Client 1]   Epoch 11/25, Loss: 0.4620
+[Client 1]   Epoch 12/25, Loss: 0.4767
+[Client 1]   Epoch 13/25, Loss: 0.4786
+[Client 1]   Epoch 14/25, Loss: 0.4058
+[Client 1]   Epoch 15/25, Loss: 0.3324
+[Client 1]   Epoch 16/25, Loss: 0.3413
+[Client 1]   Epoch 17/25, Loss: 0.3110
+[Client 1]   Epoch 18/25, Loss: 0.2936
+[Client 1]   Epoch 19/25, Loss: 0.2498
+[Client 1]   Epoch 20/25, Loss: 0.2434
+[Client 1]   Epoch 21/25, Loss: 0.2062
+[Client 1]   Epoch 22/25, Loss: 0.2226
+[Client 1]   Epoch 23/25, Loss: 0.2366
+[Client 1]   Epoch 24/25, Loss: 0.1893
+[Client 1]   Epoch 25/25, Loss: 0.1566
+
+📊 Testing all communication strategies...
+[Client 1] 📦 baseline: 2448.52 KB, 8.84 ms
+[Client 1] ✅ Upload complete: 2.84s
+[Client 1] 📦 fp16_gzip: 1116.27 KB, 84.70 ms
+[Client 1] ✅ Upload complete: 3.21s
+[Client 1] 📦 fc_only: 2055.32 KB, 1.47 ms
+[Client 1] ✅ Upload complete: 4.21s
+[Client 1] 📦 delta: 2448.52 KB, 5.53 ms
+[Client 1] ✅ Upload complete: 5.60s
+
+✅ Round 1 complete
+
+======================================================================
+📡 Round 2/10
+======================================================================
+
+[Client 1] Starting training with learning rate: 0.0005...
+[Client 1] Detected 5 classes.
+[Client 1]   Epoch 1/25, Loss: 1.4626
+[Client 1]   Epoch 2/25, Loss: 1.2033
+[Client 1]   Epoch 3/25, Loss: 1.0942
+[Client 1]   Epoch 4/25, Loss: 1.0215
+[Client 1]   Epoch 5/25, Loss: 0.8979
+[Client 1]   Epoch 6/25, Loss: 0.8133
+[Client 1]   Epoch 7/25, Loss: 0.7052
+[Client 1]   Epoch 8/25, Loss: 0.7209
+[Client 1]   Epoch 9/25, Loss: 0.6009
+[Client 1]   Epoch 10/25, Loss: 0.5303
+[Client 1]   Epoch 11/25, Loss: 0.4549
+[Client 1]   Epoch 12/25, Loss: 0.4447
+[Client 1]   Epoch 13/25, Loss: 0.3850
+[Client 1]   Epoch 14/25, Loss: 0.4244
+[Client 1]   Epoch 15/25, Loss: 0.3265
+[Client 1]   Epoch 16/25, Loss: 0.3142
+[Client 1]   Epoch 17/25, Loss: 0.2541
+[Client 1]   Epoch 18/25, Loss: 0.2405
+[Client 1]   Epoch 19/25, Loss: 0.2438
+[Client 1]   Epoch 20/25, Loss: 0.2392
+[Client 1]   Epoch 21/25, Loss: 0.2104
+[Client 1]   Epoch 22/25, Loss: 0.1723
+[Client 1]   Epoch 23/25, Loss: 0.1923
+[Client 1]   Epoch 24/25, Loss: 0.2228
+[Client 1]   Epoch 25/25, Loss: 0.1732
+
+📊 Testing all communication strategies...
+[Client 1] 📦 baseline: 2448.52 KB, 6.53 ms
+[Client 1] ✅ Upload complete: 6.68s
+[Client 1] 📦 fp16_gzip: 1116.78 KB, 102.43 ms
+[Client 1] ✅ Upload complete: 8.41s
+[Client 1] 📦 fc_only: 2055.32 KB, 1.67 ms
+[Client 1] ✅ Upload complete: 11.49s
+[Client 1] 📦 delta: 2447.95 KB, 13.77 ms
+[Client 1] ✅ Upload complete: 14.45s
+
+✅ Round 2 complete
+
+======================================================================
+📡 Round 3/10
+======================================================================
+
+[Client 1] Starting training with learning rate: 0.0005...
+[Client 1] Detected 5 classes.
+[Client 1]   Epoch 1/25, Loss: 1.4576
+[Client 1]   Epoch 2/25, Loss: 1.1465
+[Client 1]   Epoch 3/25, Loss: 1.0436
+[Client 1]   Epoch 4/25, Loss: 0.8694
+[Client 1]   Epoch 5/25, Loss: 0.7805
+[Client 1]   Epoch 6/25, Loss: 0.7235
+[Client 1]   Epoch 7/25, Loss: 0.6270
+[Client 1]   Epoch 8/25, Loss: 0.5590
+[Client 1]   Epoch 9/25, Loss: 0.5003
+[Client 1]   Epoch 10/25, Loss: 0.4627
+[Client 1]   Epoch 11/25, Loss: 0.4483
+[Client 1]   Epoch 12/25, Loss: 0.4339
+[Client 1]   Epoch 13/25, Loss: 0.3853
+[Client 1]   Epoch 14/25, Loss: 0.3320
+[Client 1]   Epoch 15/25, Loss: 0.3025
+[Client 1]   Epoch 16/25, Loss: 0.2511
+[Client 1]   Epoch 17/25, Loss: 0.2720
+[Client 1]   Epoch 18/25, Loss: 0.2635
+[Client 1]   Epoch 19/25, Loss: 0.2496
+[Client 1]   Epoch 20/25, Loss: 0.2110
+[Client 1]   Epoch 21/25, Loss: 0.1833
+[Client 1]   Epoch 22/25, Loss: 0.1879
+[Client 1]   Epoch 23/25, Loss: 0.1799
+[Client 1]   Epoch 24/25, Loss: 0.1643
+[Client 1]   Epoch 25/25, Loss: 0.1651
+
+📊 Testing all communication strategies...
+[Client 1] 📦 baseline: 2448.52 KB, 7.16 ms
+[Client 1] ✅ Upload complete: 6.35s
+[Client 1] 📦 fp16_gzip: 1116.26 KB, 96.58 ms
+[Client 1] ✅ Upload complete: 8.73s
+[Client 1] 📦 fc_only: 2055.32 KB, 1.74 ms
+[Client 1] ✅ Upload complete: 11.36s
+[Client 1] 📦 delta: 2447.95 KB, 7.27 ms
+[Client 1] ✅ Upload complete: 14.44s
+
+✅ Round 3 complete
+
+======================================================================
+📡 Round 4/10
+======================================================================
+
+[Client 1] Starting training with learning rate: 0.0005...
+[Client 1] Detected 5 classes.
+[Client 1]   Epoch 1/25, Loss: 1.4818
+[Client 1]   Epoch 2/25, Loss: 1.2665
+[Client 1]   Epoch 3/25, Loss: 1.0901
+[Client 1]   Epoch 4/25, Loss: 0.9661
+[Client 1]   Epoch 5/25, Loss: 0.8837
+[Client 1]   Epoch 6/25, Loss: 0.7588
+[Client 1]   Epoch 7/25, Loss: 0.7108
+[Client 1]   Epoch 8/25, Loss: 0.6416
+[Client 1]   Epoch 9/25, Loss: 0.5945
+[Client 1]   Epoch 10/25, Loss: 0.5792
+[Client 1]   Epoch 11/25, Loss: 0.4901
+[Client 1]   Epoch 12/25, Loss: 0.4798
+[Client 1]   Epoch 13/25, Loss: 0.4356
+[Client 1]   Epoch 14/25, Loss: 0.3899
+[Client 1]   Epoch 15/25, Loss: 0.3585
+[Client 1]   Epoch 16/25, Loss: 0.3819
+[Client 1]   Epoch 17/25, Loss: 0.4048
+[Client 1]   Epoch 18/25, Loss: 0.3310
+[Client 1]   Epoch 19/25, Loss: 0.2971
+[Client 1]   Epoch 20/25, Loss: 0.2762
+[Client 1]   Epoch 21/25, Loss: 0.2561
+[Client 1]   Epoch 22/25, Loss: 0.2047
+[Client 1]   Epoch 23/25, Loss: 0.2145
+[Client 1]   Epoch 24/25, Loss: 0.2218
+[Client 1]   Epoch 25/25, Loss: 0.2028
+
+📊 Testing all communication strategies...
+[Client 1] 📦 baseline: 2448.52 KB, 7.70 ms
+[Client 1] ✅ Upload complete: 6.27s
+[Client 1] 📦 fp16_gzip: 1116.21 KB, 100.95 ms
+[Client 1] ✅ Upload complete: 8.81s
+[Client 1] 📦 fc_only: 2055.32 KB, 1.49 ms
+[Client 1] ✅ Upload complete: 11.27s
+[Client 1] 📦 delta: 2447.95 KB, 6.93 ms
+[Client 1] ✅ Upload complete: 14.14s
+
+✅ Round 4 complete
+
+======================================================================
+📡 Round 5/10
+======================================================================
+
+[Client 1] Starting training with learning rate: 0.0005...
+[Client 1] Detected 5 classes.
+[Client 1]   Epoch 1/25, Loss: 1.4851
+[Client 1]   Epoch 2/25, Loss: 1.1346
+[Client 1]   Epoch 3/25, Loss: 1.0255
+[Client 1]   Epoch 4/25, Loss: 0.9140
+[Client 1]   Epoch 5/25, Loss: 0.8196
+[Client 1]   Epoch 6/25, Loss: 0.7300
+[Client 1]   Epoch 7/25, Loss: 0.7176
+[Client 1]   Epoch 8/25, Loss: 0.6395
+[Client 1]   Epoch 9/25, Loss: 0.5837
+[Client 1]   Epoch 10/25, Loss: 0.4870
+[Client 1]   Epoch 11/25, Loss: 0.4409
+[Client 1]   Epoch 12/25, Loss: 0.4377
+[Client 1]   Epoch 13/25, Loss: 0.4305
+[Client 1]   Epoch 14/25, Loss: 0.4284
+[Client 1]   Epoch 15/25, Loss: 0.3503
+[Client 1]   Epoch 16/25, Loss: 0.3390
+[Client 1]   Epoch 17/25, Loss: 0.3245
+[Client 1]   Epoch 18/25, Loss: 0.2688
+[Client 1]   Epoch 19/25, Loss: 0.2596
+[Client 1]   Epoch 20/25, Loss: 0.1980
+[Client 1]   Epoch 21/25, Loss: 0.2150
+[Client 1]   Epoch 22/25, Loss: 0.1878
+[Client 1]   Epoch 23/25, Loss: 0.1925
+[Client 1]   Epoch 24/25, Loss: 0.1749
+[Client 1]   Epoch 25/25, Loss: 0.1649
+
+📊 Testing all communication strategies...
+[Client 1] 📦 baseline: 2448.52 KB, 6.45 ms
+[Client 1] ✅ Upload complete: 6.19s
+[Client 1] 📦 fp16_gzip: 1116.37 KB, 64.51 ms
+[Client 1] ✅ Upload complete: 8.55s
+[Client 1] 📦 fc_only: 2055.32 KB, 1.64 ms
+[Client 1] ✅ Upload complete: 11.78s
+[Client 1] 📦 delta: 2447.95 KB, 6.76 ms
+[Client 1] ✅ Upload complete: 14.14s
+
+✅ Round 5 complete
+
+======================================================================
+📡 Round 6/10
+======================================================================
+
+[Client 1] Starting training with learning rate: 0.0005...
+[Client 1] Detected 5 classes.
+[Client 1]   Epoch 1/25, Loss: 1.4716
+[Client 1]   Epoch 2/25, Loss: 1.1755
+[Client 1]   Epoch 3/25, Loss: 1.0687
+[Client 1]   Epoch 4/25, Loss: 0.9455
+[Client 1]   Epoch 5/25, Loss: 0.8163
+[Client 1]   Epoch 6/25, Loss: 0.7214
+[Client 1]   Epoch 7/25, Loss: 0.6489
+[Client 1]   Epoch 8/25, Loss: 0.5571
+[Client 1]   Epoch 9/25, Loss: 0.5138
+[Client 1]   Epoch 10/25, Loss: 0.4485
+[Client 1]   Epoch 11/25, Loss: 0.4823
+[Client 1]   Epoch 12/25, Loss: 0.4241
+[Client 1]   Epoch 13/25, Loss: 0.3811
+[Client 1]   Epoch 14/25, Loss: 0.3387
+[Client 1]   Epoch 15/25, Loss: 0.2798
+[Client 1]   Epoch 16/25, Loss: 0.2772
+[Client 1]   Epoch 17/25, Loss: 0.2552
+[Client 1]   Epoch 18/25, Loss: 0.2740
+[Client 1]   Epoch 19/25, Loss: 0.2172
+[Client 1]   Epoch 20/25, Loss: 0.2173
+[Client 1]   Epoch 21/25, Loss: 0.1692
+[Client 1]   Epoch 22/25, Loss: 0.2142
+[Client 1]   Epoch 23/25, Loss: 0.2715
+[Client 1]   Epoch 24/25, Loss: 0.1805
+[Client 1]   Epoch 25/25, Loss: 0.1670
+
+📊 Testing all communication strategies...
+[Client 1] 📦 baseline: 2448.52 KB, 6.40 ms
+[Client 1] ✅ Upload complete: 6.40s
+[Client 1] 📦 fp16_gzip: 1116.33 KB, 104.45 ms
+[Client 1] ✅ Upload complete: 8.61s
+[Client 1] 📦 fc_only: 2055.32 KB, 1.69 ms
+[Client 1] ✅ Upload complete: 11.58s
+[Client 1] 📦 delta: 2447.96 KB, 8.03 ms
+[Client 1] ✅ Upload complete: 13.94s
+
+✅ Round 6 complete
+
+======================================================================
+📡 Round 7/10
+======================================================================
+
+[Client 1] Starting training with learning rate: 0.0005...
+[Client 1] Detected 5 classes.
+[Client 1]   Epoch 1/25, Loss: 1.5127
+[Client 1]   Epoch 2/25, Loss: 1.2259
+[Client 1]   Epoch 3/25, Loss: 1.1046
+[Client 1]   Epoch 4/25, Loss: 0.9802
+[Client 1]   Epoch 5/25, Loss: 0.8821
+[Client 1]   Epoch 6/25, Loss: 0.8024
+[Client 1]   Epoch 7/25, Loss: 0.6938
+[Client 1]   Epoch 8/25, Loss: 0.6430
+[Client 1]   Epoch 9/25, Loss: 0.5973
+[Client 1]   Epoch 10/25, Loss: 0.5471
+[Client 1]   Epoch 11/25, Loss: 0.4806
+[Client 1]   Epoch 12/25, Loss: 0.4787
+[Client 1]   Epoch 13/25, Loss: 0.4696
+[Client 1]   Epoch 14/25, Loss: 0.4139
+[Client 1]   Epoch 15/25, Loss: 0.4018
+[Client 1]   Epoch 16/25, Loss: 0.3180
+[Client 1]   Epoch 17/25, Loss: 0.3191
+[Client 1]   Epoch 18/25, Loss: 0.2603
+[Client 1]   Epoch 19/25, Loss: 0.2573
+[Client 1]   Epoch 20/25, Loss: 0.2329
+[Client 1]   Epoch 21/25, Loss: 0.2061
+[Client 1]   Epoch 22/25, Loss: 0.1903
+[Client 1]   Epoch 23/25, Loss: 0.2092
+[Client 1]   Epoch 24/25, Loss: 0.1940
+[Client 1]   Epoch 25/25, Loss: 0.1565
+
+📊 Testing all communication strategies...
+[Client 1] 📦 baseline: 2448.52 KB, 7.17 ms
+[Client 1] ✅ Upload complete: 6.26s
+[Client 1] 📦 fp16_gzip: 1115.87 KB, 90.86 ms
+[Client 1] ✅ Upload complete: 8.39s
+[Client 1] 📦 fc_only: 2055.32 KB, 1.87 ms
+[Client 1] ✅ Upload complete: 11.38s
+[Client 1] 📦 delta: 2447.95 KB, 7.08 ms
+[Client 1] ✅ Upload complete: 14.45s
+
+✅ Round 7 complete
+
+======================================================================
+📡 Round 8/10
+======================================================================
+
+[Client 1] Starting training with learning rate: 0.0005...
+[Client 1] Detected 5 classes.
+[Client 1]   Epoch 1/25, Loss: 1.5127
+[Client 1]   Epoch 2/25, Loss: 1.1636
+[Client 1]   Epoch 3/25, Loss: 1.1019
+[Client 1]   Epoch 4/25, Loss: 0.9681
+[Client 1]   Epoch 5/25, Loss: 0.7984
+[Client 1]   Epoch 6/25, Loss: 0.7803
+[Client 1]   Epoch 7/25, Loss: 0.6684
+[Client 1]   Epoch 8/25, Loss: 0.6177
+[Client 1]   Epoch 9/25, Loss: 0.5377
+[Client 1]   Epoch 10/25, Loss: 0.5187
+[Client 1]   Epoch 11/25, Loss: 0.4560
+[Client 1]   Epoch 12/25, Loss: 0.4376
+[Client 1]   Epoch 13/25, Loss: 0.3554
+[Client 1]   Epoch 14/25, Loss: 0.3653
+[Client 1]   Epoch 15/25, Loss: 0.3525
+[Client 1]   Epoch 16/25, Loss: 0.3256
+[Client 1]   Epoch 17/25, Loss: 0.2798
+[Client 1]   Epoch 18/25, Loss: 0.2876
+[Client 1]   Epoch 19/25, Loss: 0.2643
+[Client 1]   Epoch 20/25, Loss: 0.2402
+[Client 1]   Epoch 21/25, Loss: 0.2318
+[Client 1]   Epoch 22/25, Loss: 0.2200
+[Client 1]   Epoch 23/25, Loss: 0.2041
+[Client 1]   Epoch 24/25, Loss: 0.1675
+[Client 1]   Epoch 25/25, Loss: 0.1902
+
+📊 Testing all communication strategies...
+[Client 1] 📦 baseline: 2448.52 KB, 6.68 ms
+[Client 1] ✅ Upload complete: 6.41s
+[Client 1] 📦 fp16_gzip: 1115.78 KB, 100.29 ms
+[Client 1] ✅ Upload complete: 8.40s
+[Client 1] 📦 fc_only: 2055.32 KB, 1.67 ms
+[Client 1] ✅ Upload complete: 12.40s
+[Client 1] 📦 delta: 2447.95 KB, 7.66 ms
+[Client 1] ✅ Upload complete: 14.13s
+
+✅ Round 8 complete
+
+======================================================================
+📡 Round 9/10
+======================================================================
+
+[Client 1] Starting training with learning rate: 0.0005...
+[Client 1] Detected 5 classes.
+[Client 1]   Epoch 1/25, Loss: 1.5023
+[Client 1]   Epoch 2/25, Loss: 1.2499
+[Client 1]   Epoch 3/25, Loss: 1.0303
+[Client 1]   Epoch 4/25, Loss: 0.9415
+[Client 1]   Epoch 5/25, Loss: 0.8124
+[Client 1]   Epoch 6/25, Loss: 0.7388
+[Client 1]   Epoch 7/25, Loss: 0.6824
+[Client 1]   Epoch 8/25, Loss: 0.6087
+[Client 1]   Epoch 9/25, Loss: 0.5462
+[Client 1]   Epoch 10/25, Loss: 0.5183
+[Client 1]   Epoch 11/25, Loss: 0.4727
+[Client 1]   Epoch 12/25, Loss: 0.4666
+[Client 1]   Epoch 13/25, Loss: 0.4111
+[Client 1]   Epoch 14/25, Loss: 0.3289
+[Client 1]   Epoch 15/25, Loss: 0.2990
+[Client 1]   Epoch 16/25, Loss: 0.2687
+[Client 1]   Epoch 17/25, Loss: 0.2767
+[Client 1]   Epoch 18/25, Loss: 0.2483
+[Client 1]   Epoch 19/25, Loss: 0.2499
+[Client 1]   Epoch 20/25, Loss: 0.2014
+[Client 1]   Epoch 21/25, Loss: 0.2204
+[Client 1]   Epoch 22/25, Loss: 0.2013
+[Client 1]   Epoch 23/25, Loss: 0.1996
+[Client 1]   Epoch 24/25, Loss: 0.1704
+[Client 1]   Epoch 25/25, Loss: 0.1511
+
+📊 Testing all communication strategies...
+[Client 1] 📦 baseline: 2448.53 KB, 9.04 ms
+[Client 1] ✅ Upload complete: 6.03s
+[Client 1] 📦 fp16_gzip: 1116.19 KB, 95.21 ms
+[Client 1] ✅ Upload complete: 8.34s
+[Client 1] 📦 fc_only: 2055.32 KB, 1.77 ms
+[Client 1] ✅ Upload complete: 11.15s
+[Client 1] 📦 delta: 2447.95 KB, 8.39 ms
+[Client 1] ✅ Upload complete: 14.25s
+
+✅ Round 9 complete
+
+======================================================================
+📡 Round 10/10
+======================================================================
+
+[Client 1] Starting training with learning rate: 0.0005...
+[Client 1] Detected 5 classes.
+[Client 1]   Epoch 1/25, Loss: 1.5056
+[Client 1]   Epoch 2/25, Loss: 1.2032
+[Client 1]   Epoch 3/25, Loss: 1.0772
+[Client 1]   Epoch 4/25, Loss: 0.9702
+[Client 1]   Epoch 5/25, Loss: 0.8722
+[Client 1]   Epoch 6/25, Loss: 0.7331
+[Client 1]   Epoch 7/25, Loss: 0.6733
+[Client 1]   Epoch 8/25, Loss: 0.6008
+[Client 1]   Epoch 9/25, Loss: 0.5518
+[Client 1]   Epoch 10/25, Loss: 0.5089
+[Client 1]   Epoch 11/25, Loss: 0.4867
+[Client 1]   Epoch 12/25, Loss: 0.4378
+[Client 1]   Epoch 13/25, Loss: 0.4106
+[Client 1]   Epoch 14/25, Loss: 0.3716
+[Client 1]   Epoch 15/25, Loss: 0.3403
+[Client 1]   Epoch 16/25, Loss: 0.2646
+[Client 1]   Epoch 17/25, Loss: 0.2752
+[Client 1]   Epoch 18/25, Loss: 0.2859
+[Client 1]   Epoch 19/25, Loss: 0.2318
+[Client 1]   Epoch 20/25, Loss: 0.2242
+[Client 1]   Epoch 21/25, Loss: 0.2029
+[Client 1]   Epoch 22/25, Loss: 0.2004
+[Client 1]   Epoch 23/25, Loss: 0.1900
+[Client 1]   Epoch 24/25, Loss: 0.1940
+[Client 1]   Epoch 25/25, Loss: 0.2028
+
+📊 Testing all communication strategies...
+[Client 1] 📦 baseline: 2448.52 KB, 6.48 ms
+[Client 1] ✅ Upload complete: 6.22s
+[Client 1] 📦 fp16_gzip: 1116.29 KB, 90.21 ms
+[Client 1] ✅ Upload complete: 8.46s
+[Client 1] 📦 fc_only: 2055.32 KB, 1.71 ms
+[Client 1] ✅ Upload complete: 11.34s
+[Client 1] 📦 delta: 2447.97 KB, 6.73 ms
+[Client 1] ✅ Upload complete: 14.44s
+
+✅ Round 10 complete
+
+======================================================================
+📊 Communication Optimization Results
+======================================================================
+
+Strategy        Avg Size (KB)   Avg Time (ms)   Reduction 
+----------------------------------------------------------------------
+baseline        2448.52         7.25            0.0       %
+fp16_gzip       1116.23         93.02           54.4      %
+fc_only         2055.32         1.67            16.1      %
+delta           2448.01         7.82            0.0       %
+
+✅ Results saved to Week4_Client_Results/communication_comparison.csv
+======================================================================

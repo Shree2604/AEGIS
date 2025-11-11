@@ -1,0 +1,55 @@
+AIDER  fedma_utils.py  readme.md  week4_client.py  week4_server.py
+(aegis_env) shreeraj@raspberrypi:~/AEGIS/AEGIS/4 $ python week4_client.py 10.0.107.145 AIDER/AIDER
+======================================================================
+🚀 Week 4 Client: Communication Optimization
+======================================================================
+Server: 10.0.107.145:9999
+Dataset: AIDER/AIDER
+======================================================================
+
+📁 Loading AIDER dataset...
+✅ Loaded 750 images from 5 classes
+
+======================================================================
+📡 Round 1/10
+======================================================================
+
+[Client 1] Starting training with learning rate: 0.0005...
+[Client 1] Detected 5 classes.
+[Client 1]   Epoch 1/25, Loss: 1.5254
+[Client 1]   Epoch 2/25, Loss: 1.2611
+[Client 1]   Epoch 3/25, Loss: 1.0712
+[Client 1]   Epoch 4/25, Loss: 0.9574
+[Client 1]   Epoch 5/25, Loss: 0.8764
+[Client 1]   Epoch 6/25, Loss: 0.8129
+[Client 1]   Epoch 7/25, Loss: 0.7595
+[Client 1]   Epoch 8/25, Loss: 0.6687
+[Client 1]   Epoch 9/25, Loss: 0.5945
+[Client 1]   Epoch 10/25, Loss: 0.5441
+[Client 1]   Epoch 11/25, Loss: 0.4620
+[Client 1]   Epoch 12/25, Loss: 0.4767
+[Client 1]   Epoch 13/25, Loss: 0.4786
+[Client 1]   Epoch 14/25, Loss: 0.4058
+[Client 1]   Epoch 15/25, Loss: 0.3324
+[Client 1]   Epoch 16/25, Loss: 0.3413
+[Client 1]   Epoch 17/25, Loss: 0.3110
+[Client 1]   Epoch 18/25, Loss: 0.2936
+[Client 1]   Epoch 19/25, Loss: 0.2498
+[Client 1]   Epoch 20/25, Loss: 0.2434
+[Client 1]   Epoch 21/25, Loss: 0.2062
+[Client 1]   Epoch 22/25, Loss: 0.2226
+[Client 1]   Epoch 23/25, Loss: 0.2366
+[Client 1]   Epoch 24/25, Loss: 0.1893
+[Client 1]   Epoch 25/25, Loss: 0.1566
+
+📊 Testing all communication strategies...
+[Client 1] 📦 baseline: 2448.52 KB, 8.84 ms
+[Client 1] ✅ Upload complete: 2.84s
+[Client 1] 📦 fp16_gzip: 1116.27 KB, 84.70 ms
+[Client 1] ✅ Upload complete: 3.21s
+[Client 1] 📦 fc_only: 2055.32 KB, 1.47 ms
+[Client 1] ✅ Upload complete: 4.21s
+[Client 1] 📦 delta: 2448.52 KB, 5.53 ms
+[Client 1] ✅ Upload complete: 5.60s
+
+✅ Round 1 complete
